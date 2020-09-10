@@ -1,1 +1,106 @@
+@import 'mixins';
+@import 'variables';
 
+#login--pannel {
+  width: 477px;
+  height: 100vh;
+  background: $orange;
+}
+
+.login--heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .login--logo {
+    @include fontform(36px, left, auto, 700);
+    margin: 44px 0 0 44px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .close--icon{
+    margin: 44px 44px 0 0;
+    cursor: pointer;
+
+  }
+}
+
+.login--container {
+  margin-left:93.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  @include pos(absolute, 50%, auto);
+  transform:translateY(-50%);
+  .form--container{
+    position: relative;
+    @include w-h(290px, 64px);
+    overflow: hidden;
+    border-radius: 63px;
+    margin: 12px 0;
+    .form--input {
+      @include w-h(100%, 100%);
+      color: $orange;
+      padding-top: 20px;
+      border: none;
+      outline: none;
+      padding-left: 31.5px;
+      @include fontform(16px, left, auto, 600);
+
+    }
+    .form--label {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      @include w-h(100%, 100%);
+      pointer-events: none;
+      @include fontform(16px, left, auto, 600);
+      color: $blue;
+      .form--content {
+        position: absolute;
+        bottom: 14px;
+        left: 31.5px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.form--label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  @include w-h(100%, 100%);
+  pointer-events: none;
+  border-bottom: 3px solid $blue;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+
+
+.form--input:focus + .form--label .form--content,
+.form--input:valid + .form--label .form--content{
+  transform: translateY(-150%);
+  @include fontform(12px, left, auto, 500);
+  color: $blue;
+}
+
+.form--input:focus + .form--label::after,
+.form--input:valid + .form--label::after {
+  transform: translateX(0%);
+}
+
+.login--button {
+  @include w-h(290px, 63px);
+  @include fontform(18px, center, 63px, 600);
+  background: $blue;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 63px;
+}

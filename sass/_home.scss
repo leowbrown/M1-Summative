@@ -3,6 +3,7 @@
 // Hero image ////////////
 
 .hero--img--container {
+  overflow: hidden;
   @include posright(absolute, 0, 0);
   @include image(auto, 100vh, -1);
   .hero--img{
