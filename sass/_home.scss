@@ -1,0 +1,50 @@
+@import 'mixins';
+
+// Hero image ////////////
+
+.hero--img--container {
+  @include posright(absolute, 0, 0);
+  @include image(auto, 100vh, -1);
+  .hero--img{
+    height: 100%;
+    width: auto;
+  }
+}
+
+// cta styling /////////////
+
+.cta--container {
+  @include float(50%, auto, left);
+  @include pos(absolute, 50%, 1%);
+  transform:translateY(-50%);
+  .cta--header {
+    @include fontform (75px, center, 92%, 700);
+    color: $orange;
+  }
+  .cta--subheader {
+    @include fontform (19px, center, 92%, 600);
+    color: $blue;
+    padding: 14px;
+  }
+  .cta--button {
+    @include w-h(286px, 51px);
+    @include fontform (24px, center, auto, 600);
+    border-radius: 51px;
+    border: none;
+    background: $orange;
+    color: #fff;
+    display: block;
+    margin: 8px auto;
+
+  }
+}
+
+
+
+
+
+
+
+.cta--container::after {
+  @include f-reset(block, both, "");
+}

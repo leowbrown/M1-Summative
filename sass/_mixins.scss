@@ -1,0 +1,48 @@
+@mixin float($w, $h, $f) {
+  width: $w;
+  height: $h;
+  float: $f;
+}
+
+@mixin f-reset($d, $c, $cl) {
+  display: $d;
+  clear: $c;
+  content: $cl;
+
+}
+
+@mixin w-h($w,$h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin image($w, $h, $z) {
+  width: $w;
+  height: $h;
+  z-index: $z;
+}
+
+@mixin pos($p, $t, $l){
+  position: $p;
+  top: $t;
+  left: $l;
+}
+@mixin posright($p, $t, $r){
+  position: $p;
+  top: $t;
+  right: $r;
+}
+
+
+@mixin fontform($fs, $ta, $lh, $fw) {
+  font-size: $fs;
+  text-align: $ta;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin flex-b($d, $fd, $ai) {
+  display: $d;
+  flex-direction: $fd;
+  align-items: $ai;
+}

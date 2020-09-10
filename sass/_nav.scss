@@ -1,0 +1,39 @@
+@import 'mixins';
+@import 'variables';
+
+
+// Desktop Nav //////////////////
+
+
+.nav--container {
+  color: $orange;
+  @include w-h(100%, 142px);
+  @include flex-b(flex, row, center);
+  .brand--logo {
+    @include fontform(36px, left, 142px, 700);
+    align-self: flex-start;
+    margin-left: 66px;
+    text-transform: uppercase;
+  }
+}
+
+.list--container {
+  margin-left: auto;
+  .list--item {
+    display: inline;
+    align-self: flex-end;
+    padding: 0 60px;
+    @include fontform (18px, center, 142px, 600);
+  }
+}
+
+.nav--button{
+  @include w-h(112px, 45px);
+  border-radius: 45px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  color: $orange;
+
+}

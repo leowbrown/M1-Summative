@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; }
+
+.row::after {
+  display: block;
+  clear: both;
+  content: ""; }
+
+.nav--container {
+  color: #FD8469;
+  width: 100%;
+  height: 142px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .nav--container .brand--logo {
+    font-size: 36px;
+    text-align: left;
+    line-height: 142px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-left: 66px;
+    text-transform: uppercase; }
+
+.list--container {
+  margin-left: auto; }
+  .list--container .list--item {
+    display: inline;
+    align-self: flex-end;
+    padding: 0 60px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 142px;
+    font-weight: 600; }
+
+.nav--button {
+  width: 112px;
+  height: 45px;
+  border-radius: 45px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FD8469; }
+
+.hero--img--container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100vh;
+  z-index: -1; }
+  .hero--img--container .hero--img {
+    height: 100%;
+    width: auto; }
+
+.cta--container {
+  width: 50%;
+  height: auto;
+  float: left;
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translateY(-50%); }
+  .cta--container .cta--header {
+    font-size: 75px;
+    text-align: center;
+    line-height: 92%;
+    font-weight: 700;
+    color: #FD8469; }
+  .cta--container .cta--subheader {
+    font-size: 19px;
+    text-align: center;
+    line-height: 92%;
+    font-weight: 600;
+    color: #6FD5DF;
+    padding: 14px; }
+  .cta--container .cta--button {
+    width: 286px;
+    height: 51px;
+    font-size: 24px;
+    text-align: center;
+    line-height: auto;
+    font-weight: 600;
+    border-radius: 51px;
+    border: none;
+    background: #FD8469;
+    color: #fff;
+    display: block;
+    margin: 8px auto; }
+
+.cta--container::after {
+  display: block;
+  clear: both;
+  content: ""; }
+
+/*# sourceMappingURL=style.css.map */
