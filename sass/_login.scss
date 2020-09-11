@@ -40,11 +40,28 @@
     color: #fff;
     text-transform: uppercase;
   }
+  .login--logo:hover {
+    @include fontform(36px, left, auto, 700);
+    margin: 44px 0 0 10%;
+    color: $blue;
+    text-transform: uppercase;
+    transition: all .3s ease;
+  }
 
 
-  .close--icon{
+  .fa-times{
+    color: #fff;
+    font-size: 36px;
     margin: 44px 44px 0 0;
     cursor: pointer;
+
+  }
+  .fa-times:hover{
+    color: $blue;
+    font-size: 36px;
+    margin: 44px 44px 0 0;
+    cursor: pointer;
+    transition: all .3s ease;
 
   }
 }
@@ -104,7 +121,13 @@
     color: #fff;
   }
 
-  .login--button {
+
+  .forgot--btn:hover {
+    color: $blue;
+    transition: all .3s ease;
+  }
+
+  .signin--button {
     @include w-h(90%, 50px);
     @include fontform(18px, center, 50px, 600);
     background: $blue;
@@ -113,6 +136,13 @@
     outline: none;
     color: #fff;
     border-radius: 63px;
+  }
+
+
+  .signin--button:hover {
+    background: #fff;
+    color: $blue;
+    transition: all .3s ease;
   }
 
 
@@ -139,6 +169,11 @@
     }
   }
 
+  .fb--button:hover {
+    font-weight: 600;
+    transition: all .3s ease;
+  }
+
 
   .gg--button {
     margin: 6px 0;
@@ -162,6 +197,11 @@
       font-size: 25px;
       margin-right: 20px;
     }
+  }
+
+  .gg--button:hover {
+    font-weight: 600;
+    transition: all .3s ease;
   }
 }
 

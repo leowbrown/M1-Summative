@@ -40,7 +40,7 @@
     font-weight: 600; }
 
 .login {
-  width: 112px;
+  width: 140px;
   height: 45px;
   border-radius: 45px;
   border: none;
@@ -53,7 +53,7 @@
 .login:hover {
   background: #fff;
   color: #FD8469;
-  transition: all ease .3s; }
+  transition: all ease .6s; }
 
 .hero--img--container {
   overflow: hidden;
@@ -141,9 +141,26 @@
     margin: 44px 0 0 10%;
     color: #fff;
     text-transform: uppercase; }
-  .login--heading .close--icon {
+  .login--heading .login--logo:hover {
+    font-size: 36px;
+    text-align: left;
+    line-height: auto;
+    font-weight: 700;
+    margin: 44px 0 0 10%;
+    color: #6FD5DF;
+    text-transform: uppercase;
+    transition: all .3s ease; }
+  .login--heading .fa-times {
+    color: #fff;
+    font-size: 36px;
     margin: 44px 44px 0 0;
     cursor: pointer; }
+  .login--heading .fa-times:hover {
+    color: #6FD5DF;
+    font-size: 36px;
+    margin: 44px 44px 0 0;
+    cursor: pointer;
+    transition: all .3s ease; }
 
 .login--container {
   margin-left: 7.5%;
@@ -198,7 +215,10 @@
     line-height: 72px;
     font-weight: 600;
     color: #fff; }
-  .login--container .login--button {
+  .login--container .forgot--btn:hover {
+    color: #6FD5DF;
+    transition: all .3s ease; }
+  .login--container .signin--button {
     width: 90%;
     height: 50px;
     font-size: 18px;
@@ -211,6 +231,10 @@
     outline: none;
     color: #fff;
     border-radius: 63px; }
+  .login--container .signin--button:hover {
+    background: #fff;
+    color: #6FD5DF;
+    transition: all .3s ease; }
   .login--container .fb--button {
     margin: 6px 0;
     display: flex;
@@ -233,6 +257,9 @@
     .login--container .fb--button .fa-facebook {
       font-size: 22px;
       margin-right: 10px; }
+  .login--container .fb--button:hover {
+    font-weight: 600;
+    transition: all .3s ease; }
   .login--container .gg--button {
     margin: 6px 0;
     display: flex;
@@ -256,6 +283,9 @@
       color: #4285F4;
       font-size: 25px;
       margin-right: 20px; }
+  .login--container .gg--button:hover {
+    font-weight: 600;
+    transition: all .3s ease; }
 
 .form--input:focus + .form--label .form--content,
 .form--input:valid + .form--label .form--content {

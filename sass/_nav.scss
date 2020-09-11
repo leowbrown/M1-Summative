@@ -28,7 +28,7 @@
 }
 
 .login {
-  @include w-h(112px, 45px);
+  @include w-h(140px, 45px);
   border-radius: 45px;
   border: none;
   background: none;
@@ -41,5 +41,5 @@
 .login:hover{
   background: #fff;
   color: $orange;
-  transition: all ease .3s;
+  transition: all ease .6s;
 }
