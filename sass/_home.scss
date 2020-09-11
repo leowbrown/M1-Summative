@@ -29,7 +29,7 @@
   }
   .cta--button {
     @include w-h(286px, 51px);
-    @include fontform (24px, center, auto, 600);
+    @include fontform (24px, center, auto, 500);
     border-radius: 51px;
     border: none;
     background: $orange;

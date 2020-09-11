@@ -2,10 +2,29 @@
 @import 'variables';
 
 #login--pannel {
+  position: absolute;
+  top: 0;
+  left: -477px;
+  display: block;
   width: 477px;
   height: 100vh;
   background: $orange;
+  z-index: 2;
 }
+
+
+#login--pannel.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 477px;
+  height: 100vh;
+  background: $orange;
+  z-index: 2;
+
+}
+
 
 .login--heading {
   width: 100%;
@@ -13,12 +32,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+
   .login--logo {
     @include fontform(36px, left, auto, 700);
-    margin: 44px 0 0 44px;
+    margin: 44px 0 0 10%;
     color: #fff;
     text-transform: uppercase;
   }
+
+
   .close--icon{
     margin: 44px 44px 0 0;
     cursor: pointer;
@@ -27,80 +50,125 @@
 }
 
 .login--container {
-  margin-left:93.5px;
+  margin-left:7.5%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   @include pos(absolute, 50%, auto);
   transform:translateY(-50%);
+
+
   .form--container{
     position: relative;
-    @include w-h(290px, 64px);
+    @include w-h(90%, 50px);
     overflow: hidden;
-    border-radius: 63px;
+    border-radius: 25px;
     margin: 12px 0;
+
+
     .form--input {
       @include w-h(100%, 100%);
       color: $orange;
       padding-top: 20px;
       border: none;
       outline: none;
-      padding-left: 31.5px;
+      padding-left: 25px;
       @include fontform(16px, left, auto, 600);
-
     }
+
+
     .form--label {
       position: absolute;
       bottom: 0px;
       left: 0;
       @include w-h(100%, 100%);
       pointer-events: none;
-      @include fontform(16px, left, auto, 600);
+      @include fontform(16px, left, auto, 500);
       color: $blue;
+
+
       .form--content {
         position: absolute;
         bottom: 14px;
-        left: 31.5px;
+        left: 25px;
         transition: all 0.3s ease;
       }
     }
   }
-}
 
-.form--label::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  @include w-h(100%, 100%);
-  pointer-events: none;
-  border-bottom: 3px solid $blue;
-  transform: translateX(-100%);
-  transition: all 0.3s ease;
-}
 
+  .forgot--btn {
+    @include fontform(14px, center, 72px, 600);
+    color: #fff;
+  }
+
+  .login--button {
+    @include w-h(90%, 50px);
+    @include fontform(18px, center, 50px, 600);
+    background: $blue;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 63px;
+  }
+
+
+  .fb--button {
+    margin: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    padding:0 50px 0 14px;
+    align-items: center;
+    @include fontform(14px, center, 50px, 500);
+    @include w-h(80%, 50px);
+    background: #4267B2;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 63px;
+
+
+    .fa-facebook{
+      font-size: 22px;
+      margin-right: 10px;
+    }
+  }
+
+
+  .gg--button {
+    margin: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    padding:0 60px 0 14px;
+    align-items: center;
+    @include fontform(14px, center, 50px, 500);
+    @include w-h(80%, 50px);
+    background: #f3f3f3;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #222;
+    border-radius: 63px;
+    text-transform: uppercase;
+
+
+    .fa-google{
+      color: #4285F4;
+      font-size: 25px;
+      margin-right: 20px;
+    }
+  }
+}
 
 
 .form--input:focus + .form--label .form--content,
 .form--input:valid + .form--label .form--content{
-  transform: translateY(-150%);
+  transform: translateY(-120%);
   @include fontform(12px, left, auto, 500);
   color: $blue;
-}
-
-.form--input:focus + .form--label::after,
-.form--input:valid + .form--label::after {
-  transform: translateX(0%);
-}
-
-.login--button {
-  @include w-h(290px, 63px);
-  @include fontform(18px, center, 63px, 600);
-  background: $blue;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  color: #fff;
-  border-radius: 63px;
 }
