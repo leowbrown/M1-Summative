@@ -27,7 +27,7 @@
   }
 }
 
-.login {
+.login, .profile {
   @include w-h(140px, 45px);
   border-radius: 45px;
   border: none;
@@ -38,7 +38,8 @@
   outline: none;
 }
 
-.login:hover{
+.login:hover
+, .profile:hover{
   background: #fff;
   color: $orange;
   transition: all ease .6s;

@@ -39,6 +39,7 @@
     margin: 44px 0 0 10%;
     color: #fff;
     text-transform: uppercase;
+    z-index: 2;
   }
   .login--logo:hover {
     @include fontform(36px, left, auto, 700);
@@ -54,6 +55,7 @@
     font-size: 36px;
     margin: 44px 44px 0 0;
     cursor: pointer;
+    z-index: 2;
 
   }
   .fa-times:hover{

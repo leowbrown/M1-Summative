@@ -1,0 +1,17 @@
+@import 'mixins';
+@import 'variables';
+
+@media screen and (max-width: 480px) {
+  * {
+    overflow: hidden;
+  }
+
+  .hero--img {
+    display: none;
+  }
+
+  .mobile--hero--img {
+    display: block;
+    @include image(auto, 100vh, -2);
+  }
+}
