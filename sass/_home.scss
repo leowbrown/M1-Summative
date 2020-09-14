@@ -1,52 +1,54 @@
 @import 'mixins';
 
 // Hero image ////////////
+@media screen and (min-width: 481px) {
 
-.hero--img--container {
-  overflow: hidden;
-  @include posright(absolute, 0, 0);
-  @include image(100vw, 100vh, -1);
-  .hero--img{
-    height: 100%;
-    width: auto;
-    float: right;
+  .hero--img--container {
+    overflow: hidden;
+    @include posright(absolute, 0, 0);
+    @include image(100vw, 100vh, -1);
+    .hero--img{
+      height: 100%;
+      width: auto;
+      float: right;
+    }
   }
-}
 
 
 
-// cta styling /////////////
+  // cta styling /////////////
 
-.cta--container {
-  @include float(50%, auto, left);
-  @include pos(absolute, 50%, 1%);
-  transform:translateY(-50%);
-  .cta--header {
-    @include fontform (75px, center, 92%, 700);
-    color: $orange;
+  .cta--container {
+    @include float(50%, auto, left);
+    @include pos(absolute, 50%, 1%);
+    transform:translateY(-50%);
+    .cta--header {
+      @include fontform (75px, center, 92%, 700);
+      color: $orange;
+    }
+    .cta--subheader {
+      @include fontform (19px, center, 92%, 600);
+      color: $blue;
+      padding: 14px;
+    }
+    .cta--button {
+      @include w-h(286px, 51px);
+      @include fontform (24px, center, auto, 500);
+      border-radius: 51px;
+      border: none;
+      background: $orange;
+      color: #fff;
+      display: block;
+      margin: 8px auto;
+
+    }
   }
-  .cta--subheader {
-    @include fontform (19px, center, 92%, 600);
-    color: $blue;
-    padding: 14px;
+
+  .cta--container::after {
+    @include f-reset(block, both, "");
   }
-  .cta--button {
-    @include w-h(286px, 51px);
-    @include fontform (24px, center, auto, 500);
-    border-radius: 51px;
-    border: none;
-    background: $orange;
-    color: #fff;
-    display: block;
-    margin: 8px auto;
 
+  .mobile--hero--img {
+    display: none;
   }
-}
-
-.cta--container::after {
-  @include f-reset(block, both, "");
-}
-
-.mobile--hero--img {
-  display: none;
 }

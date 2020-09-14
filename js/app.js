@@ -3,6 +3,12 @@ $(document).ready(function(){
   $('#profile--btn').hide();
   $('#profile--pannel').hide();
 
+  $('#menu--btn').click(function(){
+    $('#menu--btn').toggleClass("open");
+    $('.brand--logo').toggleClass("active", 100);
+    $('.list--container').toggleClass("active", 400, 'swing');
+  });
+
   $('#login--btn').click(function() {
     $('.cta--container').toggle(200, 'swing');
     $('.brand--logo').toggle(200, 'swing');

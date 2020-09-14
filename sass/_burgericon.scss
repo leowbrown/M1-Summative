@@ -1,0 +1,52 @@
+@import 'mixins';
+
+#menu--btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include w-h(9vh, 9vh);
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  .menu--burger {
+    @include w-h(28px, 3px);
+    background: #fff;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+  }
+}
+
+
+
+.menu--burger::before,
+.menu--burger::after {
+  content: '';
+  @include w-h(28px, 3px);
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border-radius: 3px;
+  transition: all .5s ease-in-out;
+}
+.menu--burger::before {
+  transform: translateY(-10px);
+}
+
+.menu--burger::after {
+  transform: translateY(10px);
+}
+
+#menu--btn.open .menu--burger{
+  background: transparent;
+}
+
+#menu--btn.open .menu--burger::before {
+  transform: rotate(45deg);
+}
+
+#menu--btn.open .menu--burger::after {
+  transform: rotate(-45deg);
+}

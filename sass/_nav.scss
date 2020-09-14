@@ -3,44 +3,54 @@
 
 
 // Desktop Nav //////////////////
+@media screen and (min-width: 481px) {
 
+  .nav--container {
+    color: $orange;
+    @include w-h(auto, 142px);
+    @include flex-b(flex, row, center);
 
-.nav--container {
-  color: $orange;
-  @include w-h(auto, 142px);
-  @include flex-b(flex, row, center);
+  }
+
   .brand--logo {
     @include fontform(36px, left, 142px, 700);
     align-self: flex-start;
     margin-left: 44px;
     text-transform: uppercase;
   }
-}
 
-.list--container {
-  margin-left: auto;
+  .list--container {
+    margin-left: auto;
+
+  }
+
   .list--item {
     display: inline;
     align-self: flex-end;
     padding: 0 60px;
     @include fontform (18px, center, 142px, 600);
   }
-}
 
-.login, .profile {
-  @include w-h(140px, 45px);
-  border-radius: 45px;
-  border: none;
-  background: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  outline: none;
-}
 
-.login:hover
-, .profile:hover{
-  background: #fff;
-  color: $orange;
-  transition: all ease .6s;
+  .login, .profile {
+    @include w-h(140px, 45px);
+    border-radius: 45px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    outline: none;
+  }
+
+  .login:hover
+  , .profile:hover{
+    background: #fff;
+    color: $orange;
+    transition: all ease .6s;
+  }
+
+  .menu--burger {
+    display: none;
+  }
 }
