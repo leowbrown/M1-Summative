@@ -5,13 +5,15 @@ $(document).ready(function(){
 
   $('#menu--btn').click(function(){
     $('#menu--btn').toggleClass("open");
-    $('.brand--logo').toggleClass("active", 100);
-    $('.list--container').toggleClass("active", 400, 'swing');
+    $('.brand--logo').toggleClass("active", 300);
+    $('.list--container').toggleClass("active", 500, 'swing');
+    $('#login--pannel').removeClass("active", 300, 'swing');
+    $('.cta--container').show(200, 'swing');
+    $('#profile--pannel').hide(300, 'swing');
   });
 
   $('#login--btn').click(function() {
     $('.cta--container').toggle(200, 'swing');
-    $('.brand--logo').toggle(200, 'swing');
     $('#login--pannel').toggleClass("active", 300, 'swing');
   });
 

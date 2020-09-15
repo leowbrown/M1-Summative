@@ -5,6 +5,7 @@
   #home--page{
     overflow-y: hidden;
     position: relative;
+    @include w-h(100vw, 100vh);
   }
 
   .hero--img {
@@ -14,11 +15,10 @@
   .mobile--hero--img {
     display: block;
     @include image(100vw, 100vh, -2);
-    object-fit: contain;
-    object-position: top;
+    @include posright(absolute, 0, 0);
   }
 
-
+  // NAV BEGINS
 
   .brand--logo {
     @include pos(absolute, 0, 0);
@@ -26,6 +26,7 @@
     padding:20px;
     color: $orange;
     text-transform: uppercase;
+    z-index: 2
 
   }
 
@@ -35,29 +36,27 @@
     padding:20px;
     color: #fff;
     text-transform: uppercase;
-    z-index: 2;
-
   }
 
   #menu--btn {
     @include posright(absolute, 0, 0);
+    z-index: 2;
   }
 
   .list--container{
-    position: absolute;
-    right: -100vh;
-  }
-
-  .list--container.active{
-    position: absolute;
-    right: 0;
-    background: $orange;
-    padding: 10vh 0 40vh 0;
-    @include w-h(100vw, 100vh);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .list--container.active{
+    background: $orange;
+    padding: 10vh 0 40vh 0;
+    @include w-h(100vw, 100vh);
+    z-index: 0;
+
+
   }
   .list--item {
     @include fontform(18px, 24px, center, 600);
@@ -73,4 +72,87 @@
 
   }
 
+  // CTA BEGINS
+
+  .cta--container {
+    margin: 100% auto 0 10%;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta--header{
+    @include fontform(36px, center, auto, 600);
+    color: #fff;
+  }
+
+  .cta--subheader {
+    @include fontform(14px, center, 23px, 500);
+    color: #fff;
+    white-space: normal;
+    width: 80%;
+    padding: 11px 0 18px;
+  }
+
+  .cta--button {
+    @include w-h(60%, 36px);
+    outline: none;
+    border: none;
+    background: $blue;
+    color: #fff;
+    @include fontform(16px, center, 36px, 600);
+    border-radius: 36px;
+  }
+
+  // LOGIN SECTION BEGINS
+
+  #login--pannel.active {
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .login--logo {
+    @include pos(absolute, 0, 0);
+    @include fontform(24px, auto, left, 600);
+    padding:20px;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .fa-times {
+    @include posright(absolute, 0, 0);
+    @include fontform(24px, auto, left, 600);
+    padding:20px;
+    margin: 0;
+    color: $orange;
+    z-index: 2;
+  }
+
+  // PROFILE SECTION BEGINS'
+
+  #profile--pannel {
+    width: 100vw;
+    padding: 5vh 0;
+  }
+
+  .dp--container {
+    @include w-h(50vw, 50vw);
+  }
+
+  .profile--name {
+    @include fontform(24px, left, auto, 600);
+    padding: 24px 0;
+  }
+
+  .user--options {
+    padding-bottom: 24px;
+  }
+
+  .user--options li {
+    @include fontform(14px, left, auto, 500);
+    padding: 0 0 16px 0;
+  }
 }
