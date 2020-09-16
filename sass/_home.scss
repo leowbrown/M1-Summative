@@ -5,14 +5,21 @@
 
   .hero--img--container {
     overflow: hidden;
-    @include posright(absolute, 0, 0);
     @include image(100vw, 100vh, -1);
     .hero--img{
-      height: 100%;
-      width: auto;
-      float: right;
+      @include image(auto, 100vh, -2);
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
+
+.hero--img.active{
+  @include image(auto, 100vh, -2);
+  position: absolute;
+  top: 0;
+  right: -60vw;
+}
 
 
 
@@ -42,6 +49,11 @@
       margin: .3vw auto;
 
     }
+  }
+
+  .cta--container.active {
+    position: absolute;
+    left: -50vw;
   }
 
   .cta--container::after {

@@ -19,6 +19,10 @@
     text-transform: uppercase;
   }
 
+  .brand--logo.active, .list--item.active {
+    color: #fff;
+  }
+
   .list--container {
     margin-left: auto;
 

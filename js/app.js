@@ -52,4 +52,12 @@ $(document).ready(function(){
     $('.cta--button').html("How we can help.");
   });
 
+  $('#control--room').click(function() {
+    $('.control--hero--img').toggleClass("active", 500, 'swing');
+    $('.hero--img').toggleClass("active", 500, 'swing');
+    $('.cta--container').toggleClass("active", 500, 'swing');
+    $('.brand--logo').toggleClass("active", 300, 'swing');
+    $('.list--item').toggleClass("active", 500, 'swing');
+  });
+
 });
