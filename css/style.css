@@ -97,24 +97,24 @@
     transform: translateY(-50%);
   }
   .cta--container .cta--header {
-    font-size: 75px;
+    font-size: 5vw;
     text-align: center;
     line-height: 92%;
     font-weight: 700;
     color: #FD8469;
   }
   .cta--container .cta--subheader {
-    font-size: 19px;
+    font-size: 1.1vw;
     text-align: center;
     line-height: 92%;
     font-weight: 600;
     color: #6FD5DF;
-    padding: 14px;
+    padding: 1vw;
   }
   .cta--container .cta--button {
     width: 286px;
     height: 51px;
-    font-size: 24px;
+    font-size: 1.2vw;
     text-align: center;
     line-height: auto;
     font-weight: 500;
@@ -123,7 +123,7 @@
     background: #FD8469;
     color: #fff;
     display: block;
-    margin: 8px auto;
+    margin: .3vw auto;
   }
 
   .cta--container::after {
@@ -458,8 +458,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 9vh;
-  height: 9vh;
+  width: 80px;
+  height: 80px;
   z-index: 2;
   position: relative;
   cursor: pointer;
@@ -518,14 +518,18 @@
     display: none;
   }
 
-  .mobile--hero--img {
-    display: block;
+  .hero--img--container {
     width: 100vw;
     height: 100vh;
     z-index: -2;
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .mobile--hero--img {
+    object-fit: cover;
+    object-position: top;
   }
 
   .brand--logo {
@@ -606,7 +610,7 @@
   }
 
   .cta--header {
-    font-size: 36px;
+    font-size: 9vw;
     text-align: center;
     line-height: auto;
     font-weight: 600;
@@ -614,14 +618,14 @@
   }
 
   .cta--subheader {
-    font-size: 14px;
+    font-size: 3.5vw;
     text-align: center;
     line-height: 23px;
     font-weight: 500;
     color: #fff;
     white-space: normal;
     width: 80%;
-    padding: 11px 0 18px;
+    padding: 2vw 0 4vw;
   }
 
   .cta--button {
@@ -631,7 +635,7 @@
     border: none;
     background: #6FD5DF;
     color: #fff;
-    font-size: 16px;
+    font-size: 4vw;
     text-align: center;
     line-height: 36px;
     font-weight: 600;

@@ -23,23 +23,23 @@
     @include pos(absolute, 50%, 1%);
     transform:translateY(-50%);
     .cta--header {
-      @include fontform (75px, center, 92%, 700);
+      @include fontform (5vw, center, 92%, 700);
       color: $orange;
     }
     .cta--subheader {
-      @include fontform (19px, center, 92%, 600);
+      @include fontform (1.1vw, center, 92%, 600);
       color: $blue;
-      padding: 14px;
+      padding: 1vw;
     }
     .cta--button {
       @include w-h(286px, 51px);
-      @include fontform (24px, center, auto, 500);
+      @include fontform (1.2vw, center, auto, 500);
       border-radius: 51px;
       border: none;
       background: $orange;
       color: #fff;
       display: block;
-      margin: 8px auto;
+      margin: .3vw auto;
 
     }
   }
