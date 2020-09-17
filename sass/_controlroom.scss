@@ -6,10 +6,11 @@
   position: absolute;
   top: -40vh;
   left: 0;
+  z-index: 1;
 }
 
 .control--hero--img.active {
-  @include image(100vw, auto, -2);
+  @include image(100vw, auto, -1);
   position: absolute;
   top: 0;
   left: 0;
@@ -21,19 +22,39 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: -2;
 
+}
+
+.control--list--container {
+  @include w-h(10vh, 100vh);
+  background: $blue;
 }
 
 .control--list {
   list-style: none;
-  height: 80vh;
+  height: auto;
   width: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 6vh;
-  color: $blue;
-  background: $orange;
-  padding: 30vh 5vh
+  font-size: 5vh;
+  color: white;
+  background: $blue;
+  margin: 20vh 0;
+  cursor: pointer;
+
+}
+
+.list--icon {
+  line-height: 10vh;
+  width: 10vh;
+  height: 10vh;
+  text-align: center;
+
+}
+
+#lighting.active, #cameras.active, #alarms.active, #music.active, #temp.active {
+  line-height: 12vh;
+  width: 10vh;
+  height: 11.25vh;
+  background-color: $orange;
+  text-align: center;
 }

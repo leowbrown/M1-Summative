@@ -2,14 +2,16 @@ $(document).ready(function(){
 
   $('#profile--btn').hide();
   $('#profile--pannel').hide();
+  $('#control--pannel').hide();
 
   $('#menu--btn').click(function(){
     $('#menu--btn').toggleClass("open");
-    $('.brand--logo').toggleClass("active", 300);
     $('.list--container').toggleClass("active", 500, 'swing');
     $('#login--pannel').removeClass("active", 300, 'swing');
     $('.cta--container').show(200, 'swing');
     $('#profile--pannel').hide(300, 'swing');
+    $('.brand--logo').removeClass("active", 200, 'swing');
+
   });
 
   $('#login--btn').click(function() {
@@ -25,6 +27,7 @@ $(document).ready(function(){
     $('.cta--header').html("Welcome Back");
     $('.cta--subheader').html("Its good to see you again.")
     $('.cta--button').html("Control room");
+    $('.mobile--hero--img').toggleClass("active", 200, 'swing')
   });
 
   $('#profile--btn').click(function() {
@@ -51,12 +54,18 @@ $(document).ready(function(){
     $('.cta--button').html("How we can help.");
   });
 
-  $('#control--room').click(function() {
-    $('.control--hero--img').toggleClass("active", 500, 'swing');
+  $('#control--room, .cta--button').click(function() {
+    $('.control--hero--img').toggleClass("active", 300, 'swing');
     $('.hero--img').toggleClass("active", 500, 'swing');
     $('.cta--container').toggleClass("active", 500, 'swing');
-    $('.brand--logo').toggleClass("active", 300, 'swing');
+    $('.brand--logo').delay(200).toggleClass("active", 300, 'swing');
     $('.list--item').toggleClass("active", 500, 'swing');
+    $('#control--pannel').toggle(300, 'swing');
+    $('#menu--btn').toggleClass("open");
+    $('.list--container').toggleClass("active", 500, 'swing');
+    $('#login--pannel').removeClass("active", 300, 'swing');
+    $('.mobile--hero--img').toggleClass("active", 200, 'swing')
+
   });
 
   $('.brand--logo, .login--logo').click(function() {
@@ -67,6 +76,60 @@ $(document).ready(function(){
     $('.control--hero--img').removeClass("active", 500, 'swing');
     $('#login--pannel').removeClass("active", 500, 'swing');
     $('#profile--pannel').removeClass("active", 500, 'swing');
+    $('#control--pannel').hide(200, 'swing');
+    $('.mobile--hero--img').removeClass("active", 200, 'swing')
   });
+
+  $('#lighting').click(function() {
+    $('#lighting').toggleClass("active", 300, 'swing');
+    $('#cameras').removeClass("active", 300, 'swing');
+    $('#alarms').removeClass("active", 300, 'swing');
+    $('#music').removeClass("active", 300, 'swing');
+    $('#temp').removeClass("active", 300, 'swing');
+  });
+  $('#cameras').click(function() {
+    $('#cameras').toggleClass("active", 300, 'swing');
+    $('#lighting').removeClass("active", 300, 'swing');
+    $('#alarms').removeClass("active", 300, 'swing');
+    $('#music').removeClass("active", 300, 'swing');
+    $('#temp').removeClass("active", 300, 'swing');
+  });
+  $('#alarms').click(function() {
+    $('#alarms').toggleClass("active", 300, 'swing');
+    $('#cameras').removeClass("active", 300, 'swing');
+    $('#lighting').removeClass("active", 300, 'swing');
+    $('#music').removeClass("active", 300, 'swing');
+    $('#temp').removeClass("active", 300, 'swing');
+  });
+  $('#music').click(function() {
+    $('#music').toggleClass("active", 300, 'swing');
+    $('#cameras').removeClass("active", 300, 'swing');
+    $('#lighting').removeClass("active", 300, 'swing');
+    $('#temp').removeClass("active", 300, 'swing');
+    $('#alarms').removeClass("active", 300, 'swing');
+  });
+  $('#temp').click(function() {
+    $('#temp').toggleClass("active", 300, 'swing');
+    $('#cameras').removeClass("active", 300, 'swing');
+    $('#lighting').removeClass("active", 300, 'swing');
+    $('#music').removeClass("active", 300, 'swing');
+    $('#alarms').removeClass("active", 300, 'swing');
+  });
+
+  $('#home').click(function() {
+    $('.list--container').toggleClass("active", 300, 'swing');
+    $('.cta--container').show(200, 'swing');
+    $('.brand--logo').show(200, 'swing');
+    $('#login--pannel').hide(300, 'swing');
+    $('#profile--pannel').hide(300, 'swing');
+    $('.control--hero--img').toggleClass("active", 300, 'swing');
+    $('.hero--img').toggleClass("active", 500, 'swing');
+    $('.cta--container').toggleClass("active", 500, 'swing');
+    $('#control--pannel').toggle(300, 'swing');
+    $('#menu--btn').toggleClass("open");
+    $('.mobile--hero--img').toggleClass("active", 200, 'swing')
+
+  });
+
 
 });

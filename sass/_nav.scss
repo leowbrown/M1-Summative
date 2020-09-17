@@ -23,6 +23,15 @@
   .brand--logo.active, .list--item.active {
     color: #fff;
   }
+  .brand--logo.active {
+    cursor: pointer;
+
+  }
+  .brand--logo.active:hover {
+    color: $blue;
+    transition: all .5s ease;
+
+  }
 
   .list--container {
     margin-left: auto;
@@ -31,7 +40,7 @@
   .list--item {
     display: inline;
     align-self: flex-end;
-    padding: 0 5vw;
+    padding: 0 5vh;
     @include fontform (18px, center, 142px, 600);
   }
 
@@ -45,6 +54,7 @@
     font-weight: 600;
     color: #fff;
     outline: none;
+    cursor: pointer;
   }
 
   .login:hover
@@ -58,4 +68,16 @@
     display: none;
   }
 
+  #control--room {
+    cursor: pointer;
+  }
+
+  #control--room:hover {
+    color: $blue;
+    transition: all .3s ease;
+  }
+
+  #home {
+    display: none;
+  }
 }

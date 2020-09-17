@@ -4,8 +4,7 @@
 @media screen and (max-width: 480px) {
   #home--page{
     overflow-y: hidden;
-    position: relative;
-    @include w-h(100vw, 100vh);
+    @include w-h(100vw, 0);
   }
 
   .hero--img {
@@ -17,13 +16,27 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
+    pointer-events: none;
   }
 
   .mobile--hero--img {
-    object-fit: cover;
-    object-position: top;
+      object-fit: cover;
+      object-position: top;
   }
 
+  .mobile--hero--img.active {
+    position: absolute;
+    right: -150vh;
+    width: 100vh;
+    height: auto;
+  }
+
+  .control--hero--img.active {
+      width: 200vw;
+      z-index: 0;
+      pointer-events: none;
+  }
   // NAV BEGINS
 
   .brand--logo {
@@ -32,7 +45,6 @@
     padding:20px;
     color: $orange;
     text-transform: uppercase;
-    z-index: 2
 
   }
 
@@ -42,6 +54,7 @@
     padding:20px;
     color: #fff;
     text-transform: uppercase;
+    z-index: 1;
   }
 
   #menu--btn {
@@ -54,19 +67,27 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    top: -20vh;
   }
 
   .list--container.active{
     background: $orange;
     padding: 10vh 0 40vh 0;
     @include w-h(100vw, 100vh);
-    z-index: 0;
+    // z-index: 0;
+    position: absolute;
+    top: 0vh;
 
 
   }
   .list--item {
     @include fontform(18px, 24px, center, 600);
     color: #fff;
+  }
+
+  #home {
+    display: inline;
   }
 
   .login, .profile {
@@ -87,6 +108,8 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: -1;
   }
 
   .cta--header{
@@ -112,11 +135,17 @@
     border-radius: 36px;
   }
 
+  .cta--container.active {
+    position: absolute;
+    left: -130vw;
+    z-index: -2;
+  }
+
   // LOGIN SECTION BEGINS
 
   #login--pannel.active {
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
   }
 
   .login--container {
@@ -218,6 +247,12 @@
     @include fontform(16px, center, 40px, 500);
     height: 40px;
     border-radius: 40px;
+  }
+
+  // CONTROL ROOM BEGINS
+
+  .control--container {
+    z-index: -1;
   }
 
 }
