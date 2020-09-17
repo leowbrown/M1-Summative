@@ -514,10 +514,7 @@
   font-size: 6vh;
   color: #6FD5DF;
   background: #FD8469;
-}
-
-.control--list:nth-child(1) {
-  padding-top: 20vh;
+  padding: 30vh 5vh;
 }
 
 #menu--btn {
