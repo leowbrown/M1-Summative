@@ -3,9 +3,13 @@
 // Hero image ////////////
 @media screen and (min-width: 481px) {
 
+  #home--page {
+    z-index: 0
+  }
+
   .hero--img--container {
     overflow: hidden;
-    @include image(100vw, 100vh, -1);
+    @include image(100vw, 100vh, -2);
     .hero--img{
       @include image(auto, 100vh, -2);
       position: absolute;

@@ -25,7 +25,6 @@ $(document).ready(function(){
     $('.cta--header').html("Welcome Back");
     $('.cta--subheader').html("Its good to see you again.")
     $('.cta--button').html("Control room");
-
   });
 
   $('#profile--btn').click(function() {
@@ -58,6 +57,16 @@ $(document).ready(function(){
     $('.cta--container').toggleClass("active", 500, 'swing');
     $('.brand--logo').toggleClass("active", 300, 'swing');
     $('.list--item').toggleClass("active", 500, 'swing');
+  });
+
+  $('.brand--logo, .login--logo').click(function() {
+    $('.cta--container').removeClass("active", 500, 'swing');
+    $('.hero--img').removeClass("active", 500, 'swing');
+    $('.list--item').removeClass("active", 500, 'swing');
+    $('.brand--logo').removeClass("active", 500, 'swing');
+    $('.control--hero--img').removeClass("active", 500, 'swing');
+    $('#login--pannel').removeClass("active", 500, 'swing');
+    $('#profile--pannel').removeClass("active", 500, 'swing');
   });
 
 });

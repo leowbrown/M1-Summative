@@ -7,8 +7,9 @@
 
   .nav--container {
     color: $orange;
-    @include w-h(auto, 142px);
+    @include w-h(100vw, 142px);
     @include flex-b(flex, row, center);
+    z-index: 2;
 
   }
 
@@ -25,13 +26,12 @@
 
   .list--container {
     margin-left: auto;
-
   }
 
   .list--item {
     display: inline;
     align-self: flex-end;
-    padding: 0 60px;
+    padding: 0 5vw;
     @include fontform (18px, center, 142px, 600);
   }
 
@@ -57,4 +57,5 @@
   .menu--burger {
     display: none;
   }
+
 }

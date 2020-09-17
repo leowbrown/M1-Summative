@@ -4,7 +4,7 @@
 .control--hero--img {
   @include image(100vw, auto, -2);
   position: absolute;
-  top: -30vh;
+  top: -40vh;
   left: 0;
 }
 
@@ -13,4 +13,30 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#control--pannel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.control--list {
+  list-style: none;
+  height: 80vh;
+  width: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 6vh;
+  color: $blue;
+  background: $orange;
+}
+
+.control--list:nth-child(1){
+  padding-top: 20vh;
 }
