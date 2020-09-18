@@ -29,6 +29,8 @@
 .control--list--container {
   @include w-h(10vh, 100vh);
   background: $blue;
+  margin: 0;
+  float: left;
 }
 
 .control--list {
@@ -57,4 +59,72 @@
   height: 11.25vh;
   background-color: $orange;
   text-align: center;
+}
+
+.room--lighting {
+  @include w-h(70vw, 60vh );
+  color: $blue;
+  display: grid;
+  grid-template: 1fr 1fr  / 1fr 1fr 1fr;
+  font-size: 7vw;
+  text-align: center;
+  opacity: 0;
+  margin: 30vh 0;
+}
+
+.room--lighting.active {
+  @include w-h(70vw, 60vh );
+  color: $blue;
+  display: grid;
+  grid-template: 1fr 1fr  / 1fr 1fr 1fr;
+  margin: 35vh 10vw;
+  font-size: 7vw;
+  text-align: center;
+  opacity: 100%;
+}
+
+.room--lighting div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.on--off--input {
+  position: relative;
+  background: #fff;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  -webkit-appearance: none;
+  transition: all .5s ease;
+  background: $blue;
+  outline: none;
+  margin: 2.5vh;
+}
+
+.on--off--input:checked {
+  background: $orange;
+}
+
+.on--off--input::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 15px;
+  transition: all .5s ease;
+  transform: scale(.7);
+
+}
+
+.on--off--input:checked::before {
+  left: 50px;
+}
+
+#kitchen--icon.active, #dining--icon.active, #bedroom--icon.active, #garage--icon.active, #bathroom--icon.active, #living--icon.active {
+  color: $orange;
 }

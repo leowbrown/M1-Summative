@@ -30,8 +30,11 @@
   <body>
 
 
+<!-- Home page starts -->
+
       <section id="home--page">
 
+  <!-- nav starts -->
 
           <nav class="nav--container">
 
@@ -53,13 +56,17 @@
 
           </nav>
 
+  <!-- nav ends -->
+  <!-- hero images container -->
+
           <div class="hero--img--container">
               <img src="img/home--hero--img.svg"  alt="home page image" class="hero--img">
               <img src="img/mobile--hero--img.svg"  alt="home page image" class="mobile--hero--img">
               <img src="img/control--room.svg" alt="" class="control--hero--img">
-
           </div>
 
+  <!-- hero images end -->
+  <!-- call to action starts -->
 
           <div class="cta--container">
               <h1 class="cta--header">A Smarter Home</h1>
@@ -67,19 +74,24 @@
               <button class="cta--button">How we can help.</button>
           </div>
 
+  <!-- call to action ends -->
 
       </section>
 
+<!-- home page ends -->
+<!-- login section starts -->
 
       <section id="login--pannel">
 
 
+  <!-- login header/close button -->
 
           <div class="login--heading">
               <h1 class="login--logo">Directed</h1>
               <i class="fas fa-times" id="close--btn"></i>
           </div>
 
+  <!-- login form starts -->
 
           <div class="login--container">
 
@@ -93,7 +105,7 @@
 
               <div class="form--container">
                   <input type="password" class="form--input" name="password" autocomplete="off" required>
-                  <label for="passowrd" class="form--label">
+                  <label for="password" class="form--label">
                       <span class="form--content">Password</span>
                   </label>
               </div>
@@ -106,22 +118,30 @@
               <button class="fb--button"><i class="fab fa-facebook"></i>Continue with facebook</button>
 
               <button class="gg--button"><i class="fab fa-google"></i>Continue with google</button>
-
-
           </div>
 
+  <!-- login form ends -->
+
       </section>
+
+<!-- login section ends -->
+<!-- profile section starts -->
 
       <section id="profile--pannel">
 
           <div class="profile--container">
 
+  <!-- user display photo -->
 
               <div class="dp--container">
                   <img src="img/usericon.svg" alt="Profile picture" class="prof--pic">
               </div>
 
+  <!-- username -->
+
               <h1 class="profile--name">John Smith</h1>
+
+  <!-- user controls -->
 
               <ul class="user--options">
                   <li>Billing History</li>
@@ -130,15 +150,22 @@
                   <li>Help</li>
               </ul>
 
-              <button class="sign--out--btn">Sign Out</button>
+  <!-- sign out btn -->
 
+              <button class="sign--out--btn">Sign Out</button>
           </div>
 
       </section>
 
+<!-- profile section ends -->
+<!-- control room section starts -->
+
       <section id="control--pannel">
 
         <div class="control--container">
+
+  <!-- control room side nav starts -->
+
             <div class="control--list--container">
                 <ul class="control--list">
                     <li id="lighting"><i class="fas fa-lightbulb list--icon"></i></li>
@@ -148,12 +175,56 @@
                     <li id="temp"><i class="fas fa-thermometer-quarter list--icon"></i></li>
                 </ul>
             </div>
-        </div>
+
+  <!-- control room side nav ends -->
+  <!-- control room section conrrols start -->
+
+              <div class="room--controls--container">
+
+                  <div class="room--lighting">
+
+                      <div class="kitchen">
+                          <i class="fas fa-sink" id="kitchen--icon"></i>
+                          <input class="on--off--input kitchen--input"  type="checkbox">
+                      </div>
+
+                      <div class="dining">
+                          <i class="fas fa-utensils" id="dining--icon"></i>
+                          <input class="on--off--input dining--input"  type="checkbox">
+                      </div>
+
+                      <div class="bedroom">
+                          <i class="fas fa-bed" id="bedroom--icon"></i>
+                          <input class="on--off--input bedroom--input"  type="checkbox">
+                      </div>
+
+                      <div class="garage">
+                          <i class="fas fa-warehouse" id="garage--icon"></i>
+                          <input class="on--off--input garage--input"  type="checkbox">
+                      </div>
+
+                      <div class="bathroom">
+                          <i class="fas fa-toilet-paper" id="bathroom--icon"></i>
+                          <input class="on--off--input bathroom--input"  type="checkbox">
+                      </div>
+
+                      <div class="living">
+                          <i class="fas fa-couch" id="living--icon"></i>
+                          <input class="on--off--input living--input"  type="checkbox">
+                      </div>
+
+  <!-- control room section controls end -->
+
+                  </div>
+
+              </div>
+
+          </div>
 
       </section>
 
-
-
+<!-- control room section ends  -->
+<!-- html ends -->
 
 
       <!-- jquery -->

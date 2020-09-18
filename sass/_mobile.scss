@@ -78,6 +78,7 @@
     // z-index: 0;
     position: absolute;
     top: 0vh;
+    z-index: 0;
 
 
   }
@@ -145,7 +146,7 @@
 
   #login--pannel.active {
     width: 100vw;
-    z-index: 2;
+    z-index: 1;
   }
 
   .login--container {
@@ -253,6 +254,22 @@
 
   .control--container {
     z-index: -1;
+  }
+
+  .room--lighting {
+    grid-template: 1fr 1fr 1fr /1fr 1fr;
+    @include w-h(80vw, 80vh);
+  }
+
+  .room--lighting.active {
+    grid-template: 1fr 1fr 1fr /1fr 1fr;
+    font-size: 15vw;
+    @include w-h(80vw, 80vh);
+    margin: 20vh 0;
+  }
+
+  .on--off--input {
+    transform: scale(.8);
   }
 
 }
