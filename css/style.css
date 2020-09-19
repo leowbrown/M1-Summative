@@ -686,10 +686,10 @@
     overflow: hidden;
     position: relative; } }
 @media screen and (max-width: 480px) {
-  #home--page, #control--pannel {
+  #home--page {
     overflow-y: hidden;
     width: 100vw;
-    height: 100vh; }
+    height: 0; }
 
   #control--room {
     color: #fff; }
