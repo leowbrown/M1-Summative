@@ -1,24 +1,23 @@
 @import 'mixins';
 
 // Hero image ////////////
-@media screen and (min-width: 481px) {
+#home--page {
+  z-index: 0;
+  height: 15vh;
+}
 
-  #home--page {
-    z-index: 0;
-    height: 15vh;
-  }
+.hero--img--container {
+  overflow: hidden;
+  pointer-events: none;
+  @include image(100vw, 100vh, 0);
+}
 
-  .hero--img--container {
-    overflow: hidden;
-    pointer-events: none;
-    @include image(100vw, 100vh, 0);
-    .hero--img{
-      @include image(auto, 100vh, -2);
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
+.hero--img{
+  @include image(auto, 100vh, -2);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 .hero--img.active{
   @include image(auto, 100vh, -2);
@@ -29,52 +28,52 @@
 
 
 
-  // cta styling /////////////
+// cta styling /////////////
 
-  .cta--container {
-    @include float(50%, auto, left);
-    @include pos(absolute, 50%, 1%);
-    transform:translateY(-50%);
-    z-index: -2;
-    .cta--header {
-      @include fontform (5vw, center, 92%, 700);
-      color: $orange;
-    }
-    .cta--subheader {
-      @include fontform (1.1vw, center, 92%, 600);
-      color: $blue;
-      padding: 1vw;
-    }
-    .cta--button {
-      @include w-h(286px, 51px);
-      @include fontform (1.2vw, center, auto, 500);
-      border-radius: 51px;
-      border: none;
-      background: $orange;
-      color: #fff;
-      display: block;
-      margin: .3vw auto;
-      outline: none;
-      cursor: pointer;
-    }
+.cta--container {
+  @include float(50%, auto, left);
+  @include pos(absolute, 50%, 1%);
+  transform:translateY(-50%);
+  z-index: -2;
+}
+.cta--header {
+  @include fontform (5vw, center, 92%, 700);
+  color: $orange;
+}
+.cta--subheader {
+  @include fontform (1.1vw, center, 92%, 600);
+  color: $blue;
+  padding: 1vw;
+}
+.cta--button {
+  @include w-h(286px, 51px);
+  @include fontform (1.2vw, center, auto, 500);
+  border-radius: 51px;
+  border: none;
+  background: $orange;
+  color: #fff;
+  display: block;
+  margin: .3vw auto;
+  outline: none;
+  cursor: pointer;
+}
 
-    .cta--button:hover {
-      background: $blue;
-      transition: all .5s ease;
-    }
-  }
+.cta--button:hover {
+  background: $blue;
+  transition: all .5s ease;
+}
 
-  .cta--container.active {
-    position: absolute;
-    left: -50vw;
-    z-index: -2;
-  }
 
-  .cta--container::after {
-    @include f-reset(block, both, "");
-  }
+.cta--container.active {
+  position: absolute;
+  left: -50vw;
+  z-index: -2;
+}
 
-  .mobile--hero--img {
-    display: none;
-  }
+.cta--container::after {
+  @include f-reset(block, both, "");
+}
+
+.mobile--hero--img {
+  display: none;
 }

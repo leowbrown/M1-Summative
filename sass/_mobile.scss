@@ -2,7 +2,7 @@
 @import 'variables';
 
 @media screen and (max-width: 480px) {
-  #home--page{
+  #home--page, #control--pannel{
     overflow-y: hidden;
     @include w-h(100vw, 0);
   }
@@ -21,8 +21,8 @@
   }
 
   .mobile--hero--img {
-      object-fit: cover;
-      object-position: top;
+    object-fit: cover;
+    object-position: top;
   }
 
   .mobile--hero--img.active {
@@ -33,9 +33,9 @@
   }
 
   .control--hero--img.active {
-      width: 200vw;
-      z-index: 0;
-      pointer-events: none;
+    width: 200vw;
+    z-index: 0;
+    pointer-events: none;
   }
   // NAV BEGINS
 

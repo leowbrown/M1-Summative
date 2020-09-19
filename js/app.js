@@ -63,7 +63,8 @@ $(document).ready(function(){
     $('#control--pannel').toggle(300, 'swing');
     $('#menu--btn').toggleClass("open");
     $('.list--container').toggleClass("active", 500, 'swing');
-    $('.mobile--hero--img').toggleClass("active", 200, 'swing');
+    $('.mobile--hero--img').toggleClass("active", 500, 'swing');
+
   });
 
   $('.brand--logo, .login--logo').click(function() {
