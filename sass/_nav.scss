@@ -1,80 +1,81 @@
 @import 'mixins';
 @import 'variables';
+@media screen and (min-width: 481px) {
+
+  // Desktop Nav //////////////////
+  .nav--container {
+    color: $orange;
+    @include w-h(100vw, 142px);
+    @include flex-b(flex, row, center);
+    z-index: 2;
+
+  }
+
+  .brand--logo {
+    @include fontform(36px, left, 142px, 700);
+    align-self: flex-start;
+    margin-left: 44px;
+    text-transform: uppercase;
+  }
+
+  .brand--logo.active, .list--item.active {
+    color: #fff;
+  }
+  .brand--logo.active {
+    cursor: pointer;
+
+  }
+  .brand--logo.active:hover {
+    color: $blue;
+    transition: all .5s ease;
+
+  }
+
+  .list--container {
+    margin-left: auto;
+  }
+
+  .list--item {
+    display: inline;
+    align-self: flex-end;
+    padding: 0 5vh;
+    @include fontform (18px, center, 142px, 600);
+  }
 
 
-// Desktop Nav //////////////////
-.nav--container {
-  color: $orange;
-  @include w-h(100vw, 142px);
-  @include flex-b(flex, row, center);
-  z-index: 2;
+  .login, .profile {
+    @include w-h(140px, 45px);
+    border-radius: 45px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
 
-}
+  .login:hover
+  , .profile:hover{
+    background: #fff;
+    color: $orange;
+    transition: all ease .6s;
+  }
 
-.brand--logo {
-  @include fontform(36px, left, 142px, 700);
-  align-self: flex-start;
-  margin-left: 44px;
-  text-transform: uppercase;
-}
+  .menu--burger {
+    display: none;
+  }
 
-.brand--logo.active, .list--item.active {
-  color: #fff;
-}
-.brand--logo.active {
-  cursor: pointer;
+  #control--room {
+    cursor: pointer;
+  }
 
-}
-.brand--logo.active:hover {
-  color: $blue;
-  transition: all .5s ease;
+  #control--room:hover {
+    color: $blue;
+    transition: all .3s ease;
+  }
 
-}
-
-.list--container {
-  margin-left: auto;
-}
-
-.list--item {
-  display: inline;
-  align-self: flex-end;
-  padding: 0 5vh;
-  @include fontform (18px, center, 142px, 600);
-}
-
-
-.login, .profile {
-  @include w-h(140px, 45px);
-  border-radius: 45px;
-  border: none;
-  background: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-}
-
-.login:hover
-, .profile:hover{
-  background: #fff;
-  color: $orange;
-  transition: all ease .6s;
-}
-
-.menu--burger {
-  display: none;
-}
-
-#control--room {
-  cursor: pointer;
-}
-
-#control--room:hover {
-  color: $blue;
-  transition: all .3s ease;
-}
-
-#home {
-  display: none;
+  #home {
+    display: none;
+  }
 }

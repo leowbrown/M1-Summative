@@ -2,24 +2,19 @@
 @import 'variables';
 
 @media screen and (max-width: 1025px) {
-  html, body {
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-  }
+
   .list--item {
-    padding: 0 3.3vw;
+    padding: 0 2vw;
     color: #fff;
     font-size: 2vw;
     font-weight: 600;
   }
 
+  #control--room:active, #control--room:hover{
+    color: #fff;
+  }
   .brand--logo {
     font-size: 3vw;
-  }
-
-  .list--item:nth-child(2) {
-    color: $orange;
   }
 
   .login, .profile {
@@ -39,7 +34,7 @@
     height: auto;
     width: 100vw;
     position: absolute;
-    top: -10vh;
+    top: -15vh;
     right: 0;
     z-index: -2;
   }
